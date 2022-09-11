@@ -9,7 +9,7 @@ int main()
     gets(array);
 
     if(array[0] == ')'){
-        printf("uncorect ()\n");
+        printf("incorrect ()\n");
     }
     else
     {
@@ -23,15 +23,13 @@ int main()
               if(array[index]== ')'){
                 y = y+1;
                 printf("%d", y);}
-
-
          ++index;
          }
               if (x = y) {
                printf("correct parentheses\n");
             }
                if (x != y){
-              printf("uncorrect brackets");
+              printf("incorrect brackets");
             }
 }
     return 0;
