@@ -29,8 +29,11 @@ int main()
     int k;
     printf("Please enter raw: ");
     scanf("%d", &k);
+    if (k < 0 || k > 6) printf("You have entered the wrong number\n ");
 
-    for (int i = 0; i < size_arr; ++i){
+    else
+    {
+        for (int i = 0; i < size_arr; ++i){
             int temp = M[i][k];
             M[i][k]=M[k][i];
             M[k][i] = temp;
@@ -38,11 +41,11 @@ int main()
         printf("\n");
 
         for (int i = 0; i < size_arr; ++i){
-            for (int j = 0; j < size_arr; ++j){
-               printf("%d ", M[i][j]);
-            }
-            printf("\n");
+             for (int j = 0; j < size_arr; ++j){
+                  printf("%d ", M[i][j]);
+             }
+             printf("\n");
+        }
     }
-
     return 0;
 }
