@@ -1,8 +1,7 @@
 //Вычислить сумму элементов матрицы, лежащих слева от побочной диагонали
-
-#include <iostream>
-#include <stdlib.h>
-#include <time.h>
+#include "out_matrix.h"
+#include "matrix_sum.h"
+#include <stdio.h>
 
 /*
  * 1 0 0 0 0 2
@@ -17,21 +16,12 @@ int main()
 {
     constexpr int size_arr = 5;
     int M[size_arr][size_arr];
-    srand(time(nullptr));
-    for (int i = 0; i < size_arr; ++i){
-        for (int j = 0; j < size_arr; ++j){
-            M[i][j] = rand() % 10;
-            printf("%d ", M[i][j]);
-        }
-        printf("\n");
-    }
 
-    int resultSum = 0;
-    for (int i = 0; i < size_arr; ++i){
-        for (int j = 0; j < size_arr - i - 1; ++j){
-            resultSum += M[i][j] ;
-        }
-    }
+    fillMatrix(reinterpret_cast<int*>(M),size_arr,size_arr);
+    printMatrix(reinterpret_cast<int*>(M),size_arr,size_arr );
+
+    const int resultSum =sum(reinterpret_cast<int*>(M),size_arr,size_arr);
+
     printf("ResultSum: %d\n", resultSum );
 
     return 0;
