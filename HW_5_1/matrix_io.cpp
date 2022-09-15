@@ -16,7 +16,7 @@ void fillMatrix(int* array_M, int x)
 {
     srand(time(nullptr));
     for (int i = 0; i < x; ++i){
-           *(array_M + i) = rand() % 10;
+           *(array_M + i) = rand() % 10-5;
     }
 
 }
