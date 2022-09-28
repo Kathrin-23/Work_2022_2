@@ -10,23 +10,11 @@
 
 int main()
 {
-    int n;
+   int n;
 
-    inputNumber(reinterpret_cast<int*>(n));
+   n = inputNumber();
+   printf ("%d", numDigits(n));
 
-    printRepeat(reinterpret_cast<char>(A));
-
-
-    sumTsifr(reinterpret_cast<int>()(int sum, int n);
-
-}
-
-
-
-
-
-
-
-    return 0;
+   return 0;
 }
 
