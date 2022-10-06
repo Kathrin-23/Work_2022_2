@@ -8,11 +8,5 @@ unsigned int inputNumber()
         printf("Input naturalnoe chislo:  ");
         scanf("%d", &n);
     }
-    return n;
-}
-
-
-void printRezalt(int sum)
-{
-    printf("Chislo tsifr = %d", sum);
+    return static_cast<unsigned int>(n);
 }

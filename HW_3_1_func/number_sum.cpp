@@ -4,8 +4,8 @@
 unsigned int numDigits(unsigned int n)
 
 {
-    unsigned int sum = 0;
-    while (n%10) {
+    unsigned int sum = 1;
+    while (n/10) {
         sum += 1;
         n = n/10;
     }
